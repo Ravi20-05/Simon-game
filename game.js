@@ -10,6 +10,13 @@ $(document).keypress(function(){
         started=true
     }
 })
+$("#level-title").click(function(){
+    if (!started) {
+        $("#level-title").text("level "+level)
+        nextSequence();
+        started=true
+    }
+})
 
 $(".btn").click(function(){
     var userChosenColor=$(this).attr("id");
